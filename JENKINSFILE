@@ -51,7 +51,7 @@ pipeline {
 
         stage('Results') {
             steps {
-                //junit 'result*.xml' 
+		echo 'ejecución finalizada'
             }
         }
     }
