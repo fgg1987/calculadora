@@ -5,7 +5,7 @@ pipeline {
         stage('Get Code') {
             steps {
                 // Obtener código del repo
-                git 'https://github.com/fgg1987/calculadora.git'
+                git branch: 'develop', url:'https://github.com/fgg1987/calculadora.git'
             }
         }
     
