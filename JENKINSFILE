@@ -26,7 +26,7 @@ pipeline {
                                 set PYTHONPATH=%WORKSPACE%
                                 python --version
                                 pytest --version
-                                pytest --junitxml=result-unit.xml test\\unit
+                                pytest test\\unit
                             '''
                        }
                     }
@@ -41,7 +41,7 @@ pipeline {
 	                            start flask run
 	                            start java -jar C:\\Users\\fgonzalez\\Documents\\wiremock-standalone-3.3.1.jar --port 9090 --root-dir C:\\Users\\fgonzalez\\Documents\\proyecto\\calculadora\\test\\wiremock
 	                            set PYTHONPATH=%WORKSPACE%
-	                            pytest --junitxml=result-rest.xml test\\rest
+	                            pytest test\\rest
 	                        '''
 			}
                     }
@@ -51,7 +51,7 @@ pipeline {
 
         stage('Results') {
             steps {
-                junit 'result*.xml' 
+                //junit 'result*.xml' 
             }
         }
     }
